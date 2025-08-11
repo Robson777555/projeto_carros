@@ -1,0 +1,268 @@
+/* Reset e configurações básicas */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Oswald',sans-serif}
+html,body{height:100%;scroll-behavior:smooth}
+.container{width:100%;max-width:1400px;margin:0 auto}
+.clear{clear:both}
+
+/* Acessibilidade */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;top:-40px;left:6px;background:#000;color:#fff;padding:8px;text-decoration:none;z-index:1000}
+.skip-link:focus{top:6px}
+
+/* Header */
+header{padding:20px 2% 35px 2%;height:130px;position:relative}
+header div.logo{float:left}
+header div.logo img{max-width:100%;height:auto}
+header nav.desktop{float:right;position:relative;top:40px}
+
+/* Navegação mobile */
+nav.mobile{margin-top:40px;float:none;width:40px;height:40px;display:none;position:relative;text-align:center;margin-left:auto;margin-right:auto}
+
+/* Checkbox invisível para controlar o menu */
+.menu-toggle{display:none}
+
+/* Label que funciona como botão do menu */
+.mobile-menu-toggle-label{display:block;width:40px;height:40px;background-image:url('../imagens/icon_menu.png');background-size:100% 100%;cursor:pointer;position:relative;z-index:1001;transition:transform 0.3s ease}
+.mobile-menu-toggle-label:hover{transform:scale(1.1)}
+
+/* Menu mobile oculto por padrão */
+nav.mobile ul{display:none;width:90vw;max-width:400px;left:50%;top:calc(50% + 40px);transform:translate(-50%,-50%);border:4px solid #EB2D2D;z-index:1002;position:fixed;text-align:center;background-color:white;box-shadow:0 10px 30px rgba(0,0,0,0.3);list-style:none;border-radius:15px;padding:20px 0}
+
+/* Overlay para o menu mobile */
+.mobile-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.8);z-index:1001;backdrop-filter:blur(3px)}
+
+/* Quando o menu está aberto */
+body.menu-open{overflow:hidden}
+body.menu-open .mobile ul{display:block}
+
+/* Mostrar menu quando checkbox estiver marcado */
+.menu-toggle:checked ~ ul{display:block}
+
+/* Estilos dos itens do menu mobile */
+nav.mobile li{font-size:22px;padding:0;font-style:italic;border-bottom:1px solid #f0f0f0;margin:0}
+nav.mobile li:last-child{border-bottom:none}
+nav.mobile li a{color:black;text-decoration:none;display:block;padding:25px 40px;transition:all 0.3s ease;font-weight:500}
+nav.mobile li a:hover,nav.mobile li a:focus{background-color:#f8f8f8;color:#EB2D2D;transform:scale(1.05)}
+nav.mobile li a[aria-current="page"]{color:#EB2D2D;font-weight:bold}
+
+/* Navegação desktop */
+header nav.desktop ul{list-style-type:none}
+header nav.desktop ul li{float:left;font-size:23px;padding:0 30px;font-style:italic}
+header nav.desktop a{color:black;text-decoration:none;padding:10px;display:block;transition:color 0.3s ease}
+header nav.desktop a:hover,header nav.desktop a:focus{color:#EB2D2D}
+
+/* Banner */
+section.banner{overflow:hidden;width:100%;height:650px;background-color:black;background-image:url('../imagens/bg1.jpg');background-size:contain;background-position:right bottom;background-repeat:no-repeat;position:relative}
+.text-banner{padding:70px}
+.text-banner-single{width:314px;font-style:italic;margin-top:30px;height:70px;line-height:70px;padding-left:50px;color:white;font-size:23px;background-image:url('../imagens/box-text.png');background-size:100% 100%;background-repeat:no-repeat;transition:transform 0.3s ease}
+.text-banner-single:hover{transform:translateX(10px)}
+.text-banner .text-banner-single:nth-of-type(2){width:200px;position:relative;left:-10px}
+.text-banner .text-banner-single:nth-of-type(3){width:170px;position:relative;left:-20px}
+.text-banner .text-banner-single:nth-of-type(4){width:320px;font-size:21px;color:black;position:relative;left:-30px;background-image:url('../imagens/box-white-text.png')}
+.text-banner .text-banner-single:nth-of-type(4) a{color:black;text-decoration:none}
+
+/* Veículos em destaque */
+section.veiculos-destaque{padding:90px 2%}
+section.veiculos-destaque .container{padding:40px 0}
+.line-titulo{max-width:1400px;margin:0 auto;position:relative;text-align:center}
+.ln1{position:absolute;height:2px;width:100%;top:20px;background:black}
+.line-titulo h2{position:relative;background:white;display:inline-block;text-align:center;font-size:27px;padding:0 20px;font-style:italic;text-transform:uppercase}
+
+/* Vitrine de carros */
+.vitrine-destaque{float:left;width:33.3%;text-align:left;margin-bottom:30px}
+.vitrine-destaque .carro-img{width:100%;padding-top:100%;border:8px solid white;background-size:cover;background-position:center;transition:transform 0.3s ease,box-shadow 0.3s ease}
+.vitrine-destaque .carro-img:hover{transform:scale(1.05);box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+.vitrine-destaque h3{padding-left:8px;color:black;font-style:italic;font-size:20px;margin-top:10px}
+.vitrine-destaque p{padding-top:8px;padding-left:8px;color:#353535;font-size:15px;font-style:italic}
+
+/* Botões */
+.btn1{text-align:center;display:block;line-height:40px;background-color:#EB2D2D;text-decoration:none;border-bottom:5px solid #B21E1E;color:white;font-size:16px;font-style:italic;width:150px;transition:all 0.3s ease;border:none;cursor:pointer}
+.btn1:hover,.btn1:focus{background-color:#d12626;transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,0.2)}
+.btn1:active{transform:translateY(0);box-shadow:0 2px 4px rgba(0,0,0,0.2)}
+.vitrine-destaque a{margin-left:8px;margin-top:10px}
+
+/* Serviços e depoimentos */
+.servicos-descricao{display:flex}
+.half1{width:50%;text-align:right;padding:90px 0;background:#242424;color:white}
+.half1-wraper{padding-right:20%;text-align:left;display:inline-block}
+.half1-wraper h2{font-weight:normal;font-style:italic;font-size:32px}
+.half1-wraper ul{display:inline-block;margin-top:20px}
+.half1-wraper li{margin-left:15px;list-style:none;position:relative}
+.half1-wraper li:before{content:"•";color:#EB2D2D;font-weight:bold;position:absolute;left:-15px}
+.half1-wraper a{margin-left:40px;display:inline-block;vertical-align:bottom}
+
+.half2{width:50%;padding:90px 100px;background:#EB2D2D;color:white}
+.half2 h2{font-weight:normal;font-style:italic;font-size:32px}
+.half2 .depoimento-single{margin-top:19px}
+.depoimento-single blockquote{font-style:italic}
+.depoimento-single p{font-size:22px}
+.navigation{float:left;width:100%;max-width:700px;margin-top:30px}
+.arrows{float:left}
+.arrows button{background:none;border:none;cursor:pointer;margin:0 20px;padding:5px;transition:transform 0.3s ease}
+.arrows button:hover,.arrows button:focus{transform:scale(1.1)}
+.navigation img{pointer-events:none}
+.nome-depoimento{float:right;color:#252525;font-size:23px;font-style:normal}
+
+/* Contato */
+section.contato{padding:80px 2% 0 2%}
+section.contato form{max-width:600px;margin:30px auto}
+section.contato .input-wraper{float:left;padding:10px;margin-top:7px}
+section.contato input[type=text],section.contato input[type=email],section.contato input[type=tel]{width:100%;border:1px solid #ccc;height:60px;font-size:16px;line-height:40px;padding-left:15px;transition:border-color 0.3s ease,box-shadow 0.3s ease}
+section.contato input[type=text]:focus,section.contato input[type=email]:focus,section.contato input[type=tel]:focus,section.contato textarea:focus{outline:none;border-color:#EB2D2D;box-shadow:0 0 5px rgba(235,45,45,0.3)}
+section.contato textarea{font-size:16px;width:100%;border:1px solid #ccc;height:140px;padding:8px;resize:vertical;font-family:'Oswald',sans-serif}
+section.contato form .input-wraper:nth-of-type(5){text-align:center}
+section.contato input[type=submit]{border:none;cursor:pointer;display:inline-block}
+
+/* Utilitários */
+.w100{width:100%}
+.w50{width:50%}
+
+/* Footer */
+footer{margin-top:20px;padding:40px 2%;background:#252525}
+footer nav{float:left}
+footer nav ul{list-style-type:none}
+footer nav ul li{float:left;font-style:italic;padding:0 35px;font-size:19px}
+footer nav ul a{color:white;text-decoration:none;transition:color 0.3s ease}
+footer nav ul a:hover,footer nav ul a:focus{color:#EB2D2D}
+footer p{float:right;color:white;font-size:19px;font-style:italic}
+
+/* Páginas específicas */
+section.venda{padding:90px 2%;min-height:90%}
+.content-venda{margin-top:40px}
+.sidebar{float:left;width:30%}
+.search1{width:90%}
+.search1 h2{font-size:24px;color:black;font-weight:normal}
+.search1 .barra-preco{width:100%;height:20px;background:white;border:1px solid #ccc;margin-top:8px;border-radius:20px;position:relative}
+.barra-preco-fill{position:absolute;left:0;top:0;width:0;height:20px;border-radius:20px;background:linear-gradient(to bottom,rgb(255,255,255),rgb(200,200,200))}
+.pointer-barra{width:26px;height:26px;position:absolute;left:0;top:-3px;cursor:pointer;border-radius:8px;background:linear-gradient(to bottom,rgb(255,255,255),rgb(180,180,180));border:1px solid #777}
+.valor-pesquisa{margin-top:8px}
+.valor-pesquisa p{color:black;font-size:15px}
+.valor-pesquisa p:nth-of-type(1){float:left}
+.valor-pesquisa p:nth-of-type(2){float:right}
+.search2{margin-top:40px}
+.search2 h2{font-size:24px;color:black;font-weight:normal}
+.form-venda-wraper{margin-top:10px;display:flex;align-items:center}
+.form-venda-wraper input[type=checkbox]{display:none}
+.form-venda-wraper label{position:relative;padding-left:30px;cursor:pointer;font-size:16px;color:#333;line-height:20px;display:inline-block}
+.form-venda-wraper label:before{content:"";position:absolute;left:0;top:0;width:18px;height:18px;border:2px solid #ccc;border-radius:3px;background:white;transition:all 0.3s ease}
+.form-venda-wraper input[type=checkbox]:checked + label:before{background:#EB2D2D;border-color:#EB2D2D}
+.form-venda-wraper input[type=checkbox]:checked + label:after{content:"✓";position:absolute;left:3px;top:-2px;color:white;font-size:14px;font-weight:bold}
+.vitrine-venda{float:left;width:70%}
+.vitrine-venda .vitrine-destaque{margin-top:20px}
+
+/* Página de detalhes */
+section.venda-single{padding:80px 2% 0 2%}
+section.venda-single .container{padding:40px 0 0 0;text-align:center;max-width:1280px}
+.info-veiculo{display:inline-block;width:60%}
+.foto-destaque{width:100%;padding-top:70%;background-position:center;background-size:cover;background-repeat:no-repeat}
+.descricao-veiculo{vertical-align:top;display:inline-block;padding:60px 20px;text-align:left}
+.descricao-veiculo p{font-size:17px;margin-top:25px;max-width:200px}
+.descricao-veiculo a{margin-top:25px}
+.nav-galeria-parent{width:100%;padding:36px;position:relative}
+.arrow-left-nav,.arrow-right-nav{position:absolute;top:50%;cursor:pointer;transform:translateY(-50%);background-size:100% 100%;width:22px;height:22px;transition:transform 0.3s ease}
+.arrow-left-nav{left:8px;background-image:url('../imagens/arrow-left.png')}
+.arrow-right-nav{right:8px;background-image:url('../imagens/arrow-right.png')}
+.arrow-left-nav:hover,.arrow-right-nav:hover{transform:translateY(-50%) scale(1.2)}
+.info-bread{text-align:left;padding:20px 0}
+.info-bread a{text-decoration:none;color:black;transition:color 0.3s ease}
+.info-bread a:hover{color:#EB2D2D}
+.info-bread a:last-child{color:red}
+.info-bread span{padding:0 30px}
+.nav-galeria{overflow:hidden;width:100%}
+.mini-img-wraper{float:left;padding:9px;cursor:pointer;transition:background-color 0.3s ease}
+.mini-img-wraper:hover{background-color:rgb(240,240,240)}
+.mini-img{width:100%;padding-top:70%;background-position:center;background-size:cover}
+
+/* Página sobre */
+section.sobre{min-height:90%;padding:60px 2% 20px 2%}
+section.sobre .container{max-width:840px;margin-top:30px}
+section.sobre .img-destaque-sobre{width:100%;padding-top:60%;background-image:url('../imagens/of1.jpg');background-repeat:no-repeat;background-size:cover;background-position:center}
+section.sobre .descricao-autor{margin-top:20px}
+.descricao-autor h2{font-size:24px}
+.descricao-autor p{line-height:28px;font-size:16px;margin-top:10px}
+.descricao-autor2{margin-top:40px}
+.img-small{width:30%;padding-top:30%;float:left;background-image:url('../imagens/of2.jpg');background-size:cover;background-position:center}
+.descricao-autor2 p{float:left;width:70%;line-height:28px;padding:15px}
+
+/* Media Queries */
+@media screen and (max-width:1100px){
+.half1{text-align:center}
+.half1-wraper{text-align:left;padding-right:0}
+.half1-wraper a{display:block;margin-left:0;margin-top:15px}
+}
+
+@media screen and (max-width:900px){
+.nome-depoimento{float:left;width:100%;margin:20px 20px}
+}
+
+@media screen and (max-width:768px){
+footer nav{display:none}
+footer{text-align:center}
+footer p{float:none}
+.w50{width:100%}
+.nome-depoimento{float:right;width:auto;margin:0}
+section.servicos-descricao{flex-direction:column}
+.half1,.half2{padding:80px 4%;width:100%}
+
+/* Esconder banner no mobile */
+section.banner{display:none}
+
+/* Centralizar header no mobile */
+header .container{text-align:center}
+header div.logo{float:none;display:inline-block;margin-bottom:20px}
+
+nav.desktop{display:none}
+nav.mobile{display:block}
+
+
+
+.sidebar{width:100%;text-align:center}
+.search1{display:inline-block}
+.search2{text-align:left;display:inline-block}
+.vitrine-venda{text-align:center;width:100%}
+.info-veiculo{width:100%}
+.descricao-veiculo{padding:20px 0;text-align:center}
+.descricao-veiculo p{max-width:none}
+.descricao-veiculo a{display:inline-block}
+}
+
+@media screen and (max-width:580px){
+.text-banner{padding:30px}
+.text-banner-single{width:240px;font-size:18px}
+.text-banner .text-banner-single:nth-of-type(4){width:270px}
+section.veiculos-destaque .line-titulo h2{font-size:23px}
+section.veiculos-destaque .container{max-width:1000px;padding:40px 0;text-align:center}
+.vitrine-destaque{display:inline-block;float:none;width:80%;text-align:center;margin-top:20px}
+.vitrine-destaque a{display:inline-block}
+.img-small{width:100%;padding-top:100%}
+.descricao-autor2 p{width:100%;padding:20px 0}
+}
+
+@media screen and (max-width:480px){
+.vitrine-destaque{width:100%}
+
+/* Menu mobile para telas muito pequenas */
+nav.mobile ul{top:85px}
+nav.mobile li{font-size:16px}
+nav.mobile li a{padding:15px 15px}
+}
+
+/* Melhorias de performance */
+img{max-width:100%;height:auto}
+.carro-img{will-change:transform}
+.btn1{will-change:transform,background-color}
+
+/* Loading states */
+.loading{opacity:0.7;pointer-events:none}
+.loading::after{content:"";position:absolute;top:50%;left:50%;width:20px;height:20px;margin:-10px 0 0 -10px;border:2px solid #f3f3f3;border-top:2px solid #EB2D2D;border-radius:50%;animation:spin 1s linear infinite}
+
+/* @keyframes spin{
+0%{transform:rotate(0deg)}
+100%{transform:rotate(360deg)}
+} */
+
+
+
+
+
+
